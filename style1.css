@@ -86,7 +86,7 @@ img {vertical-align: middle;}
 
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:1100px){
   .topnav a{display:none;}
   .topnav a.icon{
     float:left;
@@ -95,7 +95,7 @@ img {vertical-align: middle;}
   }
 }
 
- @media screen and (max-width: 600px)
+ @media screen and (max-width: 1100px)
  {
   .topnav.responsive{position:relative;}
   .topnav.responsive .icon{
