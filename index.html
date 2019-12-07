@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<header id="headerfile">
+	<div id="head">GET READY FOR THE AVALANCHE 2020</div>
+	    <div class="slideshow-container">
+	    <div class="mySlides fade" >
+        	   
+ 				<img src="image1.jpeg" style="width:100%">
+ 				
+		</div>
+
+		<div class="mySlides fade">
+			    
+				 <img src="image2.jpeg" style="width:100%">
+				 
+ 				 
+		</div>
+
+		<div class="mySlides fade">
+			   
+ 				 <img src="image3.jpeg" style="width:100%">
+ 				
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="dotclass" >
+			    <span class="dot" onclick="currentSlide(1)"></span> 
+			    <span class="dot" onclick="currentSlide(2)"></span> 
+			    <span class="dot" onclick="currentSlide(3)"></span> 
+		</div>
+
+		 <div class="container">
+			<div class="topnav" id="mytopnav">
+				<a href="javascript:void(0);" class="icon" onclick="myfunction()">
+					<i class="fa fa-bars"></i>
+				</a>	
+				<a href="#home">
+					<i class="fa fa-fw fa-home"></i> Home</a>
+				<a href="#search"><i class="fa fa-fw fa-search"></i> Events</a>
+				<a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+				<a href="#about"><i class="fa fa-fw fa-user"></i> About</a>
+				
+		    </div>
+		</div>
+
+		</div>
+	    </header>
+
+		<div class="icon-bar">
+			<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+			<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+			<a href="#" class="google"><i class="fa fa-google"></i></a>
+			<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+			<a href="#" class="youtube"><i 
+			class="fa fa-youtube"></i></a>
+		</div>
+          
+           <script>
+			function myfunction() {
+			  var x = document.getElementById("mytopnav");
+			  if (x.className == "topnav") {
+			    x.className += " responsive";
+			  } else {
+			    x.className = "topnav";
+			  }
+			}
+            </script>
+			<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}    
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+			      slides[i].style.display = "none";  
+			  }
+			  for (i = 0; i < dots.length; i++) {
+			      dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";  
+			  dots[slideIndex-1].className += " active"; 
+			}
+			    setTimeout(showslide,4000);
+			    function showslide()
+			    {
+			    	slideIndex++;
+			    	showSlides(slideIndex);
+			    	setTimeout(showslide,4000);
+			    }
+			</script>
+
+     </body>
+</html>
